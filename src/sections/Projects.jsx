@@ -33,7 +33,10 @@ const PROJECTS = [
   },
 ]
 
+import { useTranslation } from 'react-i18next'
+
 export default function Projects() {
+  const { t } = useTranslation()
   return (
     <section
       id="projects"
@@ -41,10 +44,10 @@ export default function Projects() {
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 w-full">
         <h2 className="font-display text-lg sm:text-xl font-bold mb-3 text-brand-light-text dark:text-brand-dark-text leading-relaxed">
-          Projects
+          {t('projects.title')}
         </h2>
         <p className="text-brand-light-muted dark:text-brand-dark-muted mb-12">
-          A selection of things I&apos;ve built.
+          {t('projects.subtitle')}
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -75,7 +78,7 @@ export default function Projects() {
                     href={project.demo}
                     className="text-sm font-medium text-brand-green hover:underline"
                   >
-                    Live demo →
+                    {t('projects.liveDemo')}
                   </a>
                 )}
                 {project.source && (
@@ -83,7 +86,7 @@ export default function Projects() {
                     href={project.source}
                     className="text-sm font-medium text-brand-light-text dark:text-brand-dark-muted hover:underline"
                   >
-                    Source code
+                    {t('projects.source')}
                   </a>
                 )}
               </div>

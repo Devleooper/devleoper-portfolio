@@ -5,6 +5,7 @@ import Knowledge from './sections/Knowledge'
 import Experience from './sections/Experience'
 import Projects from './sections/Projects'
 import Contact from './sections/Contact'
+import { AnimationProvider } from './context/AnimationContext'
 
 function App() {
   const [isDark, setIsDark] = useState(() => {
@@ -34,16 +35,18 @@ function App() {
   }
 
   return (
-    <div className="bg-brand-light-bg dark:bg-brand-dark-bg text-brand-light-text dark:text-brand-dark-text min-h-screen">
-      <Navbar isDark={isDark} toggleDark={toggleDark} />
-      <main>
-        <AboutMe />
-        <Knowledge />
-        <Experience />
-        <Projects />
-        <Contact />
-      </main>
-    </div>
+    <AnimationProvider>
+      <div className="bg-brand-light-bg dark:bg-brand-dark-bg text-brand-light-text dark:text-brand-dark-text min-h-screen">
+        <Navbar isDark={isDark} toggleDark={toggleDark} />
+        <main>
+          <AboutMe />
+          <Knowledge />
+          <Experience />
+          <Projects />
+          <Contact />
+        </main>
+      </div>
+    </AnimationProvider>
   )
 }
 

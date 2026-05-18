@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 
 const NAV_LINKS = [
-  { label: 'About', href: '#about' },
-  { label: 'Knowledge', href: '#knowledge' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Contact', href: '#contact' },
+  { key: 'about', href: '#about' },
+  { key: 'knowledge', href: '#knowledge' },
+  { key: 'experience', href: '#experience' },
+  { key: 'projects', href: '#projects' },
+  { key: 'contact', href: '#contact' },
 ]
 
 function SunIcon() {
@@ -51,7 +52,42 @@ function CloseIcon() {
   )
 }
 
+function LanguageToggle() {
+  const { i18n, t } = useTranslation()
+  const current = (i18n.resolvedLanguage || i18n.language || 'en').slice(0, 2).toLowerCase()
+  const LANGS = ['en', 'es']
+
+  return (
+    <div
+      role="group"
+      aria-label={t('nav.toggleLanguage')}
+      className="inline-flex items-center rounded-md border border-brand-light-muted/60 dark:border-brand-dark-muted overflow-hidden font-display"
+      style={{ fontSize: '9px' }}
+    >
+      {LANGS.map((lng) => {
+        const active = current === lng
+        return (
+          <button
+            key={lng}
+            type="button"
+            onClick={() => i18n.changeLanguage(lng)}
+            aria-pressed={active}
+            className={`px-2 py-1.5 transition-colors ${
+              active
+                ? 'bg-brand-green text-white'
+                : 'text-brand-light-muted dark:text-brand-dark-muted hover:text-brand-light-text dark:hover:text-brand-dark-text hover:bg-brand-light-surface dark:hover:bg-brand-dark-surface'
+            }`}
+          >
+            {lng.toUpperCase()}
+          </button>
+        )
+      })}
+    </div>
+  )
+}
+
 export default function Navbar({ isDark, toggleDark }) {
+  const { t } = useTranslation()
   const [menuOpen, setMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('about')
 
@@ -78,7 +114,7 @@ export default function Navbar({ isDark, toggleDark }) {
   const handleNavClick = () => setMenuOpen(false)
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-brand-light-bg/90 dark:bg-brand-dark-bg/90 backdrop-blur border-b border-brand-light-muted dark:border-brand-dark-muted">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-brand-light-bg/90 dark:bg-brand-dark-bg/90 backdrop-blur border-b border-brand-light-muted/40 dark:border-brand-dark-muted/30">
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
         {/* Logo */}
         <a
@@ -86,12 +122,12 @@ export default function Navbar({ isDark, toggleDark }) {
           className="font-display text-xs font-bold text-brand-light-text dark:text-brand-dark-text hover:text-brand-green transition-colors"
           onClick={handleNavClick}
         >
-          Dev Portfolio
+          {t('nav.logo')}
         </a>
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-1">
-          {NAV_LINKS.map(({ label, href }) => (
+          {NAV_LINKS.map(({ key, href }) => (
             <a
               key={href}
               href={href}
@@ -101,31 +137,34 @@ export default function Navbar({ isDark, toggleDark }) {
                   : 'text-brand-light-text dark:text-brand-dark-text hover:bg-brand-light-surface dark:hover:bg-brand-dark-surface'
               }`}
             >
-              {label}
+              {t(`nav.${key}`)}
             </a>
           ))}
 
+          <LanguageToggle />
+
           <button
             onClick={toggleDark}
-            aria-label="Toggle dark mode"
-            className="ml-3 p-2 rounded-md text-brand-light-text dark:text-brand-dark-text hover:bg-brand-light-surface dark:hover:bg-brand-dark-surface transition-colors"
+            aria-label={t('nav.toggleDark')}
+            className="ml-1 p-2 rounded-md text-brand-light-text dark:text-brand-dark-text hover:bg-brand-light-surface dark:hover:bg-brand-dark-surface transition-colors"
           >
             {isDark ? <SunIcon /> : <MoonIcon />}
           </button>
         </div>
 
-        {/* Mobile: dark toggle + hamburger */}
-        <div className="flex md:hidden items-center gap-2">
+        {/* Mobile: lang + dark + hamburger */}
+        <div className="flex md:hidden items-center gap-1">
+          <LanguageToggle />
           <button
             onClick={toggleDark}
-            aria-label="Toggle dark mode"
+            aria-label={t('nav.toggleDark')}
             className="p-2 rounded-md text-brand-light-text dark:text-brand-dark-text hover:bg-brand-light-surface dark:hover:bg-brand-dark-surface transition-colors"
           >
             {isDark ? <SunIcon /> : <MoonIcon />}
           </button>
           <button
             onClick={() => setMenuOpen((o) => !o)}
-            aria-label="Toggle menu"
+            aria-label={t('nav.toggleMenu')}
             className="p-2 rounded-md text-brand-light-text dark:text-brand-dark-text hover:bg-brand-light-surface dark:hover:bg-brand-dark-surface transition-colors"
           >
             {menuOpen ? <CloseIcon /> : <MenuIcon />}
@@ -135,8 +174,8 @@ export default function Navbar({ isDark, toggleDark }) {
 
       {/* Mobile dropdown */}
       {menuOpen && (
-        <div className="md:hidden border-t border-brand-light-muted dark:border-brand-dark-muted bg-brand-light-bg dark:bg-brand-dark-bg px-4 py-3 flex flex-col gap-1">
-          {NAV_LINKS.map(({ label, href }) => (
+        <div className="md:hidden border-t border-brand-light-muted/40 dark:border-brand-dark-muted/30 bg-brand-light-bg dark:bg-brand-dark-bg px-4 py-3 flex flex-col gap-1">
+          {NAV_LINKS.map(({ key, href }) => (
             <a
               key={href}
               href={href}
@@ -147,7 +186,7 @@ export default function Navbar({ isDark, toggleDark }) {
                   : 'text-brand-light-text dark:text-brand-dark-text hover:bg-brand-light-surface dark:hover:bg-brand-dark-surface'
               }`}
             >
-              {label}
+              {t(`nav.${key}`)}
             </a>
           ))}
         </div>

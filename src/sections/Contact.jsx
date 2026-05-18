@@ -1,10 +1,14 @@
+import { useTranslation } from 'react-i18next'
+
 const LINKS = [
   { label: 'GitHub', href: 'https://github.com', icon: '🐙' },
   { label: 'LinkedIn', href: 'https://linkedin.com', icon: '💼' },
-  { label: 'Email', href: 'mailto:you@example.com', icon: '✉️' },
+  { label: 'Email', href: 'mailto:leonardo.ruizsua@gmail.com', icon: '✉️' },
 ]
 
 export default function Contact() {
+  const { t } = useTranslation()
+
   return (
     <section
       id="contact"
@@ -12,10 +16,10 @@ export default function Contact() {
     >
       <div className="max-w-2xl mx-auto px-4 sm:px-6 w-full text-center">
         <h2 className="font-display text-lg sm:text-xl font-bold mb-3 text-brand-light-text dark:text-brand-dark-text leading-relaxed">
-          Contact
+          {t('contact.title')}
         </h2>
         <p className="text-brand-light-muted dark:text-brand-dark-muted mb-12">
-          Have a project in mind or just want to say hi? Reach out!
+          {t('contact.subtitle')}
         </p>
 
         {/* Quick links */}
@@ -43,31 +47,31 @@ export default function Contact() {
         >
           <div>
             <label className="block text-sm font-medium text-brand-light-text dark:text-brand-dark-text mb-1.5">
-              Name
+              {t('contact.name')}
             </label>
             <input
               type="text"
-              placeholder="Your name"
+              placeholder={t('contact.namePlaceholder')}
               className="w-full px-4 py-2.5 rounded-lg border border-brand-light-muted dark:border-brand-dark-muted bg-brand-light-bg dark:bg-brand-dark-surface text-brand-light-text dark:text-brand-dark-text placeholder-brand-light-muted focus:outline-none focus:ring-2 focus:ring-brand-green transition"
             />
           </div>
           <div>
             <label className="block text-sm font-medium text-brand-light-text dark:text-brand-dark-text mb-1.5">
-              Email
+              {t('contact.email')}
             </label>
             <input
               type="email"
-              placeholder="you@example.com"
+              placeholder={t('contact.emailPlaceholder')}
               className="w-full px-4 py-2.5 rounded-lg border border-brand-light-muted dark:border-brand-dark-muted bg-brand-light-bg dark:bg-brand-dark-surface text-brand-light-text dark:text-brand-dark-text placeholder-brand-light-muted focus:outline-none focus:ring-2 focus:ring-brand-green transition"
             />
           </div>
           <div>
             <label className="block text-sm font-medium text-brand-light-text dark:text-brand-dark-text mb-1.5">
-              Message
+              {t('contact.message')}
             </label>
             <textarea
               rows={5}
-              placeholder="Tell me about your project..."
+              placeholder={t('contact.messagePlaceholder')}
               className="w-full px-4 py-2.5 rounded-lg border border-brand-light-muted dark:border-brand-dark-muted bg-brand-light-bg dark:bg-brand-dark-surface text-brand-light-text dark:text-brand-dark-text placeholder-brand-light-muted focus:outline-none focus:ring-2 focus:ring-brand-green transition resize-none"
             />
           </div>
@@ -75,7 +79,7 @@ export default function Contact() {
             type="submit"
             className="px-6 py-3 bg-brand-green hover:opacity-90 text-white font-medium rounded-lg transition-colors self-start"
           >
-            Send message
+            {t('contact.send')}
           </button>
         </form>
       </div>
