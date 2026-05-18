@@ -34,8 +34,8 @@
       "databases": "Bases de datos"
     },
     "skills": {
-      "java": "Mi lenguaje principal desde 2018 — desde Java 8 hasta Java 25 en varios backends en producción.",
-      "javascript": "Lo he usado a lo largo de mi carrera para scripting en Node.js, automatización y front-end. Cómodo, aunque no es mi stack más profundo.",
+      "java": "Mi lenguaje principal desde 2018 — desde Java 8 hasta Java 25 a través de varios backends.",
+      "javascript": "Usado de punta a punta — front-end, backends en Node.js con Express y scripts de automatización.",
       "typescript": "Conocimiento general — adquirido a través de NestJS y Angular para módulos y APIs tipadas.",
       "html": "Usado regularmente junto a React y Angular en trabajo de front-end.",
       "css": "Usado para estilos en todo proyecto de front-end — layouts, diseño responsive y alguna animación.",
@@ -51,8 +51,8 @@
       "gcp": "Firebase y servicios GCP para backends serverless y móviles.",
       "firebase": "Auth, Firestore y funciones serverless en proyectos móviles.",
       "linux": "Cómodo trabajando con servidores Linux — shell scripting, procesos y despliegues.",
-      "claude": "Compañero diario de código — prompt engineering y flujos agénticos para entregar más rápido.",
-      "codex": "El agente de código de OpenAI — usado para generación autónoma de código, refactors y flujos agénticos.",
+      "claude": "El agente de código de Anthropic — mi flujo de IA principal. Skills personalizadas, hooks, integraciones MCP y subagentes.",
+      "codex": "El agente de código de OpenAI — usado junto a Claude para prompt engineering y tareas agénticas.",
       "postgresql": "Diseño de esquemas, indexación, transacciones y tuning de queries.",
       "mysql": "Diseño de esquemas, joins, stored procedures y optimización de queries.",
       "mongo": "Modelado de documentos y pipelines de agregación."

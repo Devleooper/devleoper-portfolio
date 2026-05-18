@@ -2,19 +2,19 @@ import { useState, useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useHasSeen } from '../context/AnimationContext'
 import {
-  SiOpenjdk, SiJavascript, SiTypescript, SiHtml5, SiCss,
+  SiJavascript, SiTypescript, SiHtml5, SiCss,
   SiSpring, SiReact, SiAngular, SiNestjs, SiExpress, SiFlutter,
   SiGit, SiDocker, SiGooglecloud, SiFirebase, SiLinux,
   SiClaude, SiOpenai,
   SiPostgresql, SiMysql, SiMongodb,
 } from 'react-icons/si'
-import { FaAws } from 'react-icons/fa'
+import { FaAws, FaJava } from 'react-icons/fa'
 
 const SKILLS = [
   {
     categoryKey: 'languages',
     items: [
-      { key: 'java',       name: 'Java',       icon: SiOpenjdk,    color: '#EA2D2E' },
+      { key: 'java',       name: 'Java',       icon: FaJava,       color: '#EA2D2E' },
       { key: 'javascript', name: 'JavaScript', icon: SiJavascript, color: '#F7DF1E' },
       { key: 'typescript', name: 'TypeScript', icon: SiTypescript, color: '#3178C6' },
       { key: 'html',       name: 'HTML',       icon: SiHtml5,      color: '#E34F26' },

@@ -34,8 +34,8 @@
       "databases": "Databases"
     },
     "skills": {
-      "java": "My core language since 2018 — Java 8 through Java 25 across multiple production backends.",
-      "javascript": "Used across my career for Node.js scripting, automation and front-end work. Comfortable, though not my deepest stack.",
+      "java": "My core language since 2018 — Java 8 through Java 25 across multiple backends.",
+      "javascript": "Used across the stack — front-end work, Node.js backends with Express, and automation scripting.",
       "typescript": "General working knowledge — picked up through NestJS and Angular for typed modules and APIs.",
       "html": "Used regularly alongside React and Angular front-end work.",
       "css": "Used for styling on every front-end project — layouts, responsive design and the occasional animation.",
@@ -51,8 +51,8 @@
       "gcp": "Firebase and GCP services for serverless and mobile backends.",
       "firebase": "Auth, Firestore and serverless functions on mobile projects.",
       "linux": "Comfortable working with Linux servers — shell scripting, processes and deployment.",
-      "claude": "Daily coding partner — prompt engineering and agentic workflows for shipping faster.",
-      "codex": "OpenAI's coding agent — used for autonomous code generation, refactors and agentic workflows.",
+      "claude": "Anthropic's coding agent — my primary AI workflow. Custom skills, hooks, MCP integrations and subagents.",
+      "codex": "OpenAI's coding agent — used alongside Claude for prompt engineering and agentic tasks.",
       "postgresql": "Schema design, indexing, transactions and query tuning.",
       "mysql": "Schema design, joins, stored procedures and query optimisation.",
       "mongo": "Document modelling and aggregation pipelines."
