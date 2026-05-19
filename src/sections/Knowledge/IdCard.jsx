@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { TECH, SKILL_CATEGORIES } from '../../data/techIcons'
+import { TECH, SKILL_CATEGORIES } from '../../lib/techIcons'
 import TechIcon from '../../components/TechIcon'
 
 export default function IdCard({ inView }) {

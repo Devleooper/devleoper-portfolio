@@ -28,7 +28,7 @@ src/
 │   ├── Navbar.jsx
 │   └── TechIcon.jsx               # Portal-rendered tooltip icon (see notes below)
 ├── context/AnimationContext.jsx   # `useHasSeen(sectionId)` for one-shot fade-in
-├── data/techIcons.js              # Single source of truth for tech icons & language map
+├── lib/techIcons.js              # Single source of truth for tech icons & language map
 ├── hooks/useGithubRepos.js        # GitHub API client for Projects
 ├── i18n/index.js, i18n/locales/   # i18next setup + en.json / es.json
 └── sections/
@@ -51,7 +51,7 @@ Multi-component sections live in their own folder with an `index.jsx` entry.
 
 - **i18n first**: all user-facing strings go through `t('key')`. Both `en.json`
   and `es.json` must stay in sync. ES uses informal "tú", not "usted".
-- **Tech icons**: `data/techIcons.js` is the single registry. Add a new tech
+- **Tech icons**: `lib/techIcons.js` is the single registry. Add a new tech
   there with a slug key; `Knowledge` references it via `SKILL_CATEGORIES`,
   and `Projects` maps GitHub language strings via `getTechByLanguage()`.
 - **Animations**: each section uses `useHasSeen('id')` from
@@ -137,7 +137,7 @@ new repo to ES by adding its key under `projects.repos` in `es.json`.
 ## When making changes
 
 - **Don't add new top-level folders** without a strong reason. The current
-  layout (`components/`, `sections/`, `data/`, `hooks/`, `context/`, `i18n/`)
+  layout (`components/`, `sections/`, `lib/`, `hooks/`, `context/`, `i18n/`)
   covers everything for a site this size.
 - **Don't introduce TypeScript** unless explicitly asked.
 - **Don't add a state management library**. Component-local `useState` is

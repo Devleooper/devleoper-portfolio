@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { getTechByLanguage } from '../data/techIcons'
+import { getTechByLanguage } from '../lib/techIcons'
 
 const USERNAME = 'devleooper'
 const CACHE_KEY = `gh:repos:${USERNAME}`
