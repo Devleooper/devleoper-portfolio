@@ -1,0 +1,155 @@
+{
+  "nav": {
+    "logo": "Devleoper",
+    "about": "Sobre mí",
+    "knowledge": "Conocimientos",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "contact": "Contacto",
+    "toggleDark": "Cambiar modo oscuro",
+    "toggleMenu": "Abrir menú",
+    "toggleLanguage": "Cambiar idioma"
+  },
+  "about": {
+    "greeting": "Hola, soy",
+    "name": "Leo , A.K.A. Devleoper",
+    "role": "Ingeniero de Software Senior",
+    "bio": "Apasionado por la tecnología, con experiencia construyendo aplicaciones robustas y listas para producción. Curioso y siempre dispuesto a aprender y adaptarme al futuro.",
+    "cta": {
+      "contact": "Contáctame",
+      "projects": "Ver proyectos"
+    }
+  },
+  "knowledge": {
+    "title": "Conocimientos",
+    "subtitle": "Tecnologías con las que trabajo / he trabajado. Pasa el cursor sobre un ícono para saber más.",
+    "cardName": "LEO",
+    "cardAlias": "A.K.A. DEVLEOPER",
+    "cardRole": "Ingeniero de Software Senior",
+    "cardLocation": "Bogotá -",
+    "categories": {
+      "languages": "Lenguajes",
+      "frameworks": "Frameworks",
+      "tools": "Herramientas",
+      "databases": "Bases de datos"
+    },
+    "skills": {
+      "java": "Mi lenguaje principal desde 2018 — desde Java 8 hasta Java 25 a través de varios backends.",
+      "javascript": "Usado de punta a punta — front-end, backends en Node.js con Express y scripts de automatización.",
+      "typescript": "Conocimiento general — adquirido a través de NestJS y Angular para módulos y APIs tipadas.",
+      "html": "Usado regularmente junto a React y Angular en trabajo de front-end.",
+      "css": "Usado para estilos en todo proyecto de front-end — layouts, diseño responsive y alguna animación.",
+      "spring": "Mi framework backend principal — APIs REST/gRPC y servicios Spring Boot en gran parte de mi carrera.",
+      "react": "Usado en apps en producción y proyectos personales, incluido este sitio — hooks, context y patrones de componentes.",
+      "angular": "Componentes, servicios, routing y formularios reactivos — usado en proyectos full-stack.",
+      "nest": "Arquitectura modular, inyección de dependencias y APIs REST.",
+      "express": "Middleware, routing y diseño de APIs REST con Express.js.",
+      "flutter": "Lo usé hace tiempo en una app móvil — conocimiento básico de widgets y Dart.",
+      "git": "Estrategias de branching, rebase, code reviews y workflows de CI.",
+      "docker": "Contenerización de apps, configuraciones con Compose y pipelines CI/CD.",
+      "aws": "Servicios en la nube en múltiples cargas de trabajo en producción.",
+      "gcp": "Firebase y servicios GCP para backends serverless y móviles.",
+      "firebase": "Auth, Firestore y funciones serverless en proyectos móviles.",
+      "linux": "Cómodo trabajando con servidores Linux — shell scripting, procesos y despliegues.",
+      "claude": "El agente de código de Anthropic — mi flujo de IA principal. Skills personalizadas, hooks, integraciones MCP y subagentes.",
+      "codex": "El agente de código de OpenAI — usado junto a Claude para prompt engineering y tareas agénticas.",
+      "postgresql": "Diseño de esquemas, indexación, transacciones y tuning de queries.",
+      "mysql": "Diseño de esquemas, joins, stored procedures y optimización de queries.",
+      "mongo": "Modelado de documentos y pipelines de agregación."
+    }
+  },
+  "experience": {
+    "title": "Experiencia",
+    "subtitle": "Mi trayectoria profesional hasta ahora.",
+    "scrollHint": "↑↓ desplázate para ver más",
+    "present": "Actualidad",
+    "items": {
+      "sonatype": {
+        "date": "May 2022 – {{present}}",
+        "title": "Software Engineer",
+        "org": "Sonatype Inc., Bogotá D.C.",
+        "description": "Ingeniero full-stack enfocado en backend con Java, Spring, AWS y React, construyendo un producto open-source que ayuda a los equipos a gestionar su cadena de suministro de software."
+      },
+      "epam": {
+        "date": "Ago 2021 – May 2022",
+        "title": "Software Engineer",
+        "org": "EPAM Systems, Bogotá D.C.",
+        "description": "Ingeniero backend para un cliente del sector salud. Diseñé y construí APIs RESTful con Spring y NestJS en una arquitectura orientada a servicios, además de soporte en producción."
+      },
+      "perficient": {
+        "date": "Ago 2020 – Ago 2021",
+        "title": "Software Engineer",
+        "org": "Perficient Latam, Bogotá D.C.",
+        "description": "Ingeniero backend para un cliente del sector salud. Construí APIs REST y gRPC en Java/Spring (SOA) y escribí scripts de automatización en JavaScript."
+      },
+      "accentureAnalyst": {
+        "date": "Mar 2020 – Jul 2020",
+        "title": "Application Development Analyst",
+        "org": "Accenture, Bogotá D.C.",
+        "description": "Desarrollo full-stack con Angular, React Native y Java (Spring), aportando mejoras a las aplicaciones y nuevas funcionalidades."
+      },
+      "accentureAssociate": {
+        "date": "Jul 2019 – Mar 2020",
+        "title": "Software Associate",
+        "org": "Accenture, Bogotá D.C.",
+        "description": "Ingeniero backend para un banco. Construí microservicios en entornos containerizados e integré APIs REST y SOAP."
+      },
+      "abogadosapp": {
+        "date": "Oct 2019 – Nov 2020",
+        "title": "Desarrollador Freelance",
+        "org": "AbogadosApp",
+        "description": "Trabajé con un equipo de abogados para construir una solución móvil serverless para la gestión de procesos legales con Flutter y Firebase."
+      },
+      "coco": {
+        "date": "Jul 2018 – Jul 2019",
+        "title": "Java Software Developer",
+        "org": "COCO MOBILE S.A.S., Bogotá D.C.",
+        "description": "Desarrollador Java en una empresa de marketing digital. Construí soluciones con Java y jQuery y administré servidores Linux en la nube."
+      },
+      "konrad": {
+        "date": "Ene 2016 – May 2020",
+        "title": "Ingeniería de Sistemas",
+        "org": "Fundación Universitaria Konrad Lorenz",
+        "description": "Título de ingeniería de sistemas enfocado en diseño de software, algoritmos y desarrollo full-stack.\nPromedio: 4.0 / 5.0."
+      }
+    }
+  },
+  "projects": {
+    "title": "Proyectos",
+    "subtitle": "Una selección de cosas que he construido.",
+    "liveDemo": "Demo →",
+    "viewCode": "Ver código →",
+    "errorRateLimit": "Se alcanzó el límite de GitHub — inténtalo más tarde.",
+    "errorGeneric": "No se pudieron cargar los proyectos ahora mismo.",
+    "viewAllOnGithub": "Ver todo en GitHub →",
+    "empty": "Aún no hay proyectos destacados.",
+    "youAreHere": "ESTÁS AQUÍ",
+    "repos": {
+      "lol-nest": "Módulo inyectable de NestJS que envuelve la API de League of Legends de Riot en proveedores tipados y listos para usar.",
+      "Questions-web": "Frontend de una plataforma de cuestionarios que permite a los docentes evaluar a estudiantes mediante exámenes en línea.",
+      "questions-backend": "API REST (Node.js + Express + MongoDB) que da soporte a una plataforma de cuestionarios para evaluar estudiantes mediante exámenes en línea.",
+      "authentication-api": "API de referencia en Spring Boot para registro de usuarios y autenticación basada en JWT, asegurada con Spring Security y respaldada por Spring Data JPA.",
+      "devleoper-portfolio": "Portafolio personal de desarrollador (marca devleoper), construido con React y Vite."
+    }
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "¿Tienes un proyecto en mente o quieres conectar? Escríbeme por alguno de los canales.",
+    "name": "Nombre",
+    "namePlaceholder": "Tu nombre",
+    "email": "Correo",
+    "emailPlaceholder": "tu@ejemplo.com",
+    "message": "Mensaje",
+    "messagePlaceholder": "Cuéntame sobre tu proyecto...",
+    "send": "Enviar mensaje",
+    "sending": "Enviando…",
+    "error": "Algo salió mal. Intenta por alguno de los canales de arriba.",
+    "thanksTitle": "MENSAJE RECIBIDO",
+    "thanksBody": "Gracias por escribirme — te respondo pronto.",
+    "sendAnother": "Enviar otro mensaje",
+    "errors": {
+      "required": "Este campo es obligatorio.",
+      "invalidEmail": "Ingresa un correo válido."
+    }
+  }
+}

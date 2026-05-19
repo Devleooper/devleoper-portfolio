@@ -1,0 +1,148 @@
+{
+  "nav": {
+    "logo": "Devleoper",
+    "about": "About",
+    "knowledge": "Knowledge",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact",
+    "toggleDark": "Toggle dark mode",
+    "toggleMenu": "Toggle menu",
+    "toggleLanguage": "Switch language"
+  },
+  "about": {
+    "greeting": "Hi, I'm",
+    "name": "Leo , A.K.A. Devleoper",
+    "role": "Senior Software Engineer",
+    "bio": "A technology passionate, with experience building robust, production ready applications. Curious and always ready to learn and adapt to the future.",
+    "cta": {
+      "contact": "Get in touch",
+      "projects": "View projects"
+    }
+  },
+  "knowledge": {
+    "title": "Knowledge",
+    "subtitle": "Technologies I work / have worked with. Hover an icon to learn more.",
+    "cardName": "LEO",
+    "cardAlias": "A.K.A. DEVLEOPER",
+    "cardRole": "Senior Software Engineer",
+    "cardLocation": "Bogotá -",
+    "categories": {
+      "languages": "Languages",
+      "frameworks": "Frameworks",
+      "tools": "Tools",
+      "databases": "Databases"
+    },
+    "skills": {
+      "java": "My core language since 2018 — Java 8 through Java 25 across multiple backends.",
+      "javascript": "Used across the stack — front-end work, Node.js backends with Express, and automation scripting.",
+      "typescript": "General working knowledge — picked up through NestJS and Angular for typed modules and APIs.",
+      "html": "Used regularly alongside React and Angular front-end work.",
+      "css": "Used for styling on every front-end project — layouts, responsive design and the occasional animation.",
+      "spring": "My primary backend framework — REST/gRPC APIs and Spring Boot services across most of my career.",
+      "react": "Used on production apps and personal projects, including this site — hooks, context and component patterns.",
+      "angular": "Components, services, routing and reactive forms — used on full-stack projects.",
+      "nest": "Module-based architecture, dependency injection and REST APIs.",
+      "express": "Middleware, routing and REST API design with Express.js.",
+      "flutter": "Worked with it a while back on a mobile app — basic knowledge of widgets and Dart.",
+      "git": "Branching strategies, rebasing, code reviews and CI workflows.",
+      "docker": "Containerising apps, Compose setups and CI/CD pipelines.",
+      "aws": "Cloud-based services on multiple production workloads.",
+      "gcp": "Firebase and GCP services for serverless and mobile backends.",
+      "firebase": "Auth, Firestore and serverless functions on mobile projects.",
+      "linux": "Comfortable working with Linux servers — shell scripting, processes and deployment.",
+      "claude": "Anthropic's coding agent — my primary AI workflow. Custom skills, hooks, MCP integrations and subagents.",
+      "codex": "OpenAI's coding agent — used alongside Claude for prompt engineering and agentic tasks.",
+      "postgresql": "Schema design, indexing, transactions and query tuning.",
+      "mysql": "Schema design, joins, stored procedures and query optimisation.",
+      "mongo": "Document modelling and aggregation pipelines."
+    }
+  },
+  "experience": {
+    "title": "Experience",
+    "subtitle": "My professional journey so far.",
+    "scrollHint": "↑↓ scroll to see more",
+    "present": "Present",
+    "items": {
+      "sonatype": {
+        "date": "May 2022 – {{present}}",
+        "title": "Software Engineer",
+        "org": "Sonatype Inc., Bogotá D.C.",
+        "description": "Full-stack engineer focused on backend with Java, Spring, AWS and React, building an open-source product that helps teams manage their software supply chain."
+      },
+      "epam": {
+        "date": "Aug 2021 – May 2022",
+        "title": "Software Engineer",
+        "org": "EPAM Systems, Bogotá D.C.",
+        "description": "Backend engineer for a healthcare client. Designed and built RESTful APIs with Spring and NestJS in a service-oriented architecture, plus production support."
+      },
+      "perficient": {
+        "date": "Aug 2020 – Aug 2021",
+        "title": "Software Engineer",
+        "org": "Perficient Latam, Bogotá D.C.",
+        "description": "Backend engineer for a healthcare client. Built REST and gRPC APIs in Java/Spring (SOA) and wrote custom JavaScript automation scripts."
+      },
+      "accentureAnalyst": {
+        "date": "Mar 2020 – Jul 2020",
+        "title": "Application Development Analyst",
+        "org": "Accenture, Bogotá D.C.",
+        "description": "Full-stack development with Angular, React Native and Java (Spring), contributing application enhancements and new features."
+      },
+      "accentureAssociate": {
+        "date": "Jul 2019 – Mar 2020",
+        "title": "Software Associate",
+        "org": "Accenture, Bogotá D.C.",
+        "description": "Backend engineer for a bank. Built microservices in containerised environments and integrated REST and SOAP APIs."
+      },
+      "abogadosapp": {
+        "date": "Oct 2019 – Nov 2020",
+        "title": "Freelance Developer",
+        "org": "AbogadosApp",
+        "description": "Worked with a team of attorneys to build a serverless mobile solution for managing legal processes using Flutter and Firebase."
+      },
+      "coco": {
+        "date": "Jul 2018 – Jul 2019",
+        "title": "Java Software Developer",
+        "org": "COCO MOBILE S.A.S., Bogotá D.C.",
+        "description": "Java developer at a digital marketing company. Built solutions with Java and jQuery and administered cloud-based Linux servers."
+      },
+      "konrad": {
+        "date": "Jan 2016 – May 2020",
+        "title": "B.Sc. Systems Engineering",
+        "org": "Fundación Universitaria Konrad Lorenz",
+        "description": "Systems engineering degree focused on software design, algorithms and full-stack development.\nGPA: 4.0 / 5.0."
+      }
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "A selection of things I've built.",
+    "liveDemo": "Live demo →",
+    "viewCode": "View code →",
+    "errorRateLimit": "GitHub rate limit reached — try again later.",
+    "errorGeneric": "Couldn't load projects right now.",
+    "viewAllOnGithub": "View all on GitHub →",
+    "empty": "No featured projects yet.",
+    "youAreHere": "YOU ARE HERE"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Have a project in mind or just want to connect? Reach out through any channel below.",
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "email": "Email",
+    "emailPlaceholder": "you@example.com",
+    "message": "Message",
+    "messagePlaceholder": "Tell me about your project...",
+    "send": "Send message",
+    "sending": "Sending…",
+    "error": "Something went wrong. Try one of the channels above.",
+    "thanksTitle": "MESSAGE RECEIVED",
+    "thanksBody": "Thanks for reaching out — I'll get back to you soon.",
+    "sendAnother": "Send another message",
+    "errors": {
+      "required": "This field is required.",
+      "invalidEmail": "Please enter a valid email address."
+    }
+  }
+}
