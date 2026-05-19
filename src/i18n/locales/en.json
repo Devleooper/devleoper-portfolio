@@ -118,17 +118,31 @@
     "title": "Projects",
     "subtitle": "A selection of things I've built.",
     "liveDemo": "Live demo →",
-    "source": "Source code"
+    "viewCode": "View code →",
+    "errorRateLimit": "GitHub rate limit reached — try again later.",
+    "errorGeneric": "Couldn't load projects right now.",
+    "viewAllOnGithub": "View all on GitHub →",
+    "empty": "No featured projects yet.",
+    "youAreHere": "YOU ARE HERE"
   },
   "contact": {
     "title": "Contact",
-    "subtitle": "Have a project in mind or just want to say hi? Reach out!",
+    "subtitle": "Have a project in mind or just want to connect? Reach out through any channel below.",
     "name": "Name",
     "namePlaceholder": "Your name",
     "email": "Email",
     "emailPlaceholder": "you@example.com",
     "message": "Message",
     "messagePlaceholder": "Tell me about your project...",
-    "send": "Send message"
+    "send": "Send message",
+    "sending": "Sending…",
+    "error": "Something went wrong. Try one of the channels above.",
+    "thanksTitle": "MESSAGE RECEIVED",
+    "thanksBody": "Thanks for reaching out — I'll get back to you soon.",
+    "sendAnother": "Send another message",
+    "errors": {
+      "required": "This field is required.",
+      "invalidEmail": "Please enter a valid email address."
+    }
   }
 }

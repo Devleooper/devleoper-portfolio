@@ -41,10 +41,13 @@ const svg = `
         font-size="30">Senior Software Engineer</text>
 
   <text x="90" y="430" fill="${YELLOW}" font-family="Verdana, sans-serif"
-        font-size="22">Java · JavaScript · Spring · React · AI-powered dev</text>
+        font-size="30" font-weight="700">Java · JavaScript · Spring · React</text>
 
-  <text x="90" y="540" fill="${MUTED}" font-family="Verdana, sans-serif"
-        font-size="20">Bogotá, Colombia</text>
+  <text x="90" y="475" fill="${YELLOW}" font-family="Verdana, sans-serif"
+        font-size="30" font-weight="700">AI-powered dev</text>
+
+  <text x="90" y="555" fill="${WHITE}" font-family="Verdana, sans-serif"
+        font-size="26">Bogotá, Colombia</text>
 </svg>
 `
 

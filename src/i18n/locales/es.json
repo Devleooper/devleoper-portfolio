@@ -118,17 +118,38 @@
     "title": "Proyectos",
     "subtitle": "Una selección de cosas que he construido.",
     "liveDemo": "Demo →",
-    "source": "Código fuente"
+    "viewCode": "Ver código →",
+    "errorRateLimit": "Se alcanzó el límite de GitHub — inténtalo más tarde.",
+    "errorGeneric": "No se pudieron cargar los proyectos ahora mismo.",
+    "viewAllOnGithub": "Ver todo en GitHub →",
+    "empty": "Aún no hay proyectos destacados.",
+    "youAreHere": "ESTÁS AQUÍ",
+    "repos": {
+      "lol-nest": "Módulo inyectable de NestJS que envuelve la API de League of Legends de Riot en proveedores tipados y listos para usar.",
+      "Questions-web": "Frontend de una plataforma de cuestionarios que permite a los docentes evaluar a estudiantes mediante exámenes en línea.",
+      "questions-backend": "API REST (Node.js + Express + MongoDB) que da soporte a una plataforma de cuestionarios para evaluar estudiantes mediante exámenes en línea.",
+      "authentication-api": "API de referencia en Spring Boot para registro de usuarios y autenticación basada en JWT, asegurada con Spring Security y respaldada por Spring Data JPA.",
+      "devleoper-portfolio": "Portafolio personal de desarrollador (marca devleoper), construido con React y Vite."
+    }
   },
   "contact": {
     "title": "Contacto",
-    "subtitle": "¿Tienes un proyecto en mente o solo quieres saludar? ¡Escríbeme!",
+    "subtitle": "¿Tienes un proyecto en mente o quieres conectar? Escríbeme por alguno de los canales.",
     "name": "Nombre",
     "namePlaceholder": "Tu nombre",
     "email": "Correo",
     "emailPlaceholder": "tu@ejemplo.com",
     "message": "Mensaje",
     "messagePlaceholder": "Cuéntame sobre tu proyecto...",
-    "send": "Enviar mensaje"
+    "send": "Enviar mensaje",
+    "sending": "Enviando…",
+    "error": "Algo salió mal. Intenta por alguno de los canales de arriba.",
+    "thanksTitle": "MENSAJE RECIBIDO",
+    "thanksBody": "Gracias por escribirme — te respondo pronto.",
+    "sendAnother": "Enviar otro mensaje",
+    "errors": {
+      "required": "Este campo es obligatorio.",
+      "invalidEmail": "Ingresa un correo válido."
+    }
   }
 }
