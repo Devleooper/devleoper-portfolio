@@ -146,7 +146,9 @@ export default function Navbar({ isDark, toggleDark }) {
             </a>
           ))}
 
-          <LanguageToggle />
+          <div className="ml-4">
+            <LanguageToggle />
+          </div>
 
           <button
             onClick={toggleDark}
