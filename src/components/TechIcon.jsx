@@ -10,6 +10,7 @@ export default function TechIcon({ name, icon, color, fact, size = 'md' }) {
   const [pos, setPos] = useState({ left: 0, top: 0, arrowLeft: '50%' })
   const ref = useRef(null)
   const tooltipRef = useRef(null)
+  const pointerType = useRef('mouse')
 
   useEffect(() => {
     if (!open) return
@@ -49,9 +50,16 @@ export default function TechIcon({ name, icon, color, fact, size = 'md' }) {
     <div
       ref={ref}
       className="relative cursor-default"
-      onMouseEnter={() => setOpen(true)}
-      onMouseLeave={() => setOpen(false)}
-      onClick={() => setOpen((o) => !o)}
+      onPointerEnter={(e) => {
+        pointerType.current = e.pointerType
+        if (e.pointerType === 'mouse') setOpen(true)
+      }}
+      onPointerLeave={(e) => {
+        if (e.pointerType === 'mouse') setOpen(false)
+      }}
+      onClick={() => {
+        if (pointerType.current !== 'mouse') setOpen((o) => !o)
+      }}
     >
       <div className={`${dims.box} flex items-center justify-center rounded-lg
         bg-white dark:bg-brand-dark-bg
