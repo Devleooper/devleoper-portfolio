@@ -119,10 +119,15 @@ export default function Navbar({ isDark, toggleDark }) {
         {/* Logo */}
         <a
           href="#about"
-          className="font-display text-xs font-bold text-brand-light-text dark:text-brand-dark-text hover:text-brand-green transition-colors"
+          className="slide-in-left group inline-flex flex-col leading-none transition-colors"
           onClick={handleNavClick}
         >
-          {t('nav.logo')}
+          <span className="font-display text-xs font-bold text-brand-light-text dark:text-brand-dark-text group-hover:text-brand-green">
+            {t('nav.logo')}
+          </span>
+          <span className="font-body text-[9px] text-brand-light-muted dark:text-brand-dark-muted mt-1">
+            v{__APP_VERSION__}
+          </span>
         </a>
 
         {/* Desktop nav */}

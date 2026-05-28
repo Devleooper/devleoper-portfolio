@@ -43,6 +43,22 @@ body {
     animation: fadeUp 700ms ease-out forwards;
 }
 
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-left {
+    opacity: 0;
+    animation: slideInLeft 600ms ease-out forwards;
+}
+
 @keyframes pixel-float {
   0%, 100% { transform: translateY(0px); }
   50%       { transform: translateY(-10px); }
@@ -82,6 +98,7 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .pixel-float { animation: none; }
   .glow-pulse  { animation: none; opacity: 0.4; }
+  .slide-in-left { animation: none; opacity: 1; }
 }
 
 .theme-transition,
