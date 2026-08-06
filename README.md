@@ -50,7 +50,8 @@ src/
 │   ├── Navbar.jsx
 │   └── TechIcon.jsx            # Portal-based tooltip icon used by Knowledge + Projects
 ├── context/
-│   └── AnimationContext.jsx    # Tracks which sections have entered view (one-shot fade-in)
+│   ├── AnimationProvider.jsx   # Tracks which sections have entered view (one-shot fade-in)
+│   └── animationContext.js     # Context + `useHasSeen(sectionId)` consumed by sections
 ├── lib/
 │   └── techIcons.js            # Single registry of tech badges (icon, color, GitHub language map)
 ├── hooks/

@@ -28,7 +28,7 @@ src/
 │   ├── Navbar.jsx
 │   └── TechIcon.jsx               # Portal-rendered tooltip icon (see notes below)
 ├── context/
-│   ├── AnimationContext.jsx       # Provider (component-only export, for Fast Refresh)
+│   ├── AnimationProvider.jsx      # Provider (component-only export, for Fast Refresh)
 │   └── animationContext.js        # Context, SECTION_IDS, `useHasSeen(sectionId)`
 ├── lib/techIcons.js              # Single source of truth for tech icons & language map
 ├── hooks/useGithubRepos.js        # GitHub API client for Projects
@@ -59,10 +59,12 @@ Multi-component sections live in their own folder with an `index.jsx` entry.
 - **Animations**: each section uses `useHasSeen('id')` from
   `context/animationContext.js` to gate `fade-in-up`. Stagger via inline
   `animationDelay`. The section ids are registered in `SECTION_IDS`, exported
-  from the same file. The provider lives in `context/AnimationContext.jsx` and
+  from the same file. The provider lives in `context/AnimationProvider.jsx` and
   exports only the component — keeping the hook, context and `SECTION_IDS` in
-  the `.js` file is what keeps Fast Refresh working
-  (`react-refresh/only-export-components`).
+  a separate file is what keeps Fast Refresh working
+  (`react-refresh/only-export-components`). The two filenames deliberately
+  differ by more than case, so imports resolve the same way on case-insensitive
+  filesystems.
 - **Brand colors**: defined as CSS variables in `index.css`
   (`--color-brand-light-*`, `--color-brand-dark-*`, `--color-brand-green`,
   `--color-brand-yellow`). Always reference via Tailwind classes
