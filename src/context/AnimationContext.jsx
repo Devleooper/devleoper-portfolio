@@ -1,8 +1,5 @@
-import { createContext, useContext, useState, useEffect } from 'react'
-
-const AnimationContext = createContext(new Set())
-
-const SECTION_IDS = ['about', 'knowledge', 'experience', 'projects', 'contact']
+import { useState, useEffect } from 'react'
+import { AnimationContext, SECTION_IDS } from './animationContext'
 
 export function AnimationProvider({ children }) {
   // pre-seed 'about' so hero content is visible immediately on load without flashing
@@ -35,5 +32,3 @@ export function AnimationProvider({ children }) {
     </AnimationContext.Provider>
   )
 }
-
-export const useHasSeen = (sectionId) => useContext(AnimationContext).has(sectionId)

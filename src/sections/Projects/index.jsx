@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { useGithubRepos } from '../../hooks/useGithubRepos'
-import { useHasSeen } from '../../context/AnimationContext'
+import { useHasSeen } from '../../context/animationContext'
 import ProjectCard from './ProjectCard'
 import SkeletonCard from './SkeletonCard'
 
