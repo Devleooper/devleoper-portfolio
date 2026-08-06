@@ -129,7 +129,8 @@
       "Questions-web": "Frontend de una plataforma de cuestionarios que permite a los docentes evaluar a estudiantes mediante exámenes en línea.",
       "questions-backend": "API REST (Node.js + Express + MongoDB) que da soporte a una plataforma de cuestionarios para evaluar estudiantes mediante exámenes en línea.",
       "authentication-api": "API de referencia en Spring Boot para registro de usuarios y autenticación basada en JWT, asegurada con Spring Security y respaldada por Spring Data JPA.",
-      "devleoper-portfolio": "Portafolio personal de desarrollador (marca devleoper), construido con React y Vite."
+      "devleoper-portfolio": "Portafolio personal de desarrollador (marca devleoper), construido con React y Vite.",
+      "peladont": "Peladon't es una app para ayudarte a manejar tus finanzas con un toque de humor."
     }
   },
   "contact": {
