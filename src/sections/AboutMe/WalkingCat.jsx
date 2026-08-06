@@ -14,9 +14,16 @@ export default function WalkingCat({ name, className }) {
     return () => clearInterval(id)
   }, [])
 
+  // All frames stay mounted and we just toggle which one is visible. Swapping
+  // `src` on a single <img> made the browser hit the network on every frame:
+  // files copied from public/ keep stable names, so they don't get the long
+  // max-age that hashed build output does, and each swap fired a revalidation
+  // request. In the network tab that looked like the PNGs downloading on loop.
   return (
     <div className={`cat-walk cat-walk--${name} ${className}`}>
-      <img src={frames[frame]} alt="" aria-hidden="true" />
+      {frames.map((src, i) => (
+        <img key={src} src={src} alt="" aria-hidden="true" hidden={i !== frame} />
+      ))}
     </div>
   )
 }
