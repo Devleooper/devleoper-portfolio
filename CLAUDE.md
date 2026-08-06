@@ -16,7 +16,7 @@ hand-written code that they can read and tweak themselves.
 - **Formspree** free tier for the contact form (no backend)
 
 No TypeScript, no test runner, no Storybook. Lint via `eslint` with `react-hooks`
-and `react-refresh` plugins. Lint is enforced via `npm run lint`; the build does
+and `react-refresh` plugins. Lint is enforced via `bun run lint`; the build does
 not gate on lint.
 
 ## Project structure
@@ -27,7 +27,9 @@ src/
 ├── components/                    # Shared UI consumed by sections
 │   ├── Navbar.jsx
 │   └── TechIcon.jsx               # Portal-rendered tooltip icon (see notes below)
-├── context/AnimationContext.jsx   # `useHasSeen(sectionId)` for one-shot fade-in
+├── context/
+│   ├── AnimationProvider.jsx      # Provider (component-only export, for Fast Refresh)
+│   └── animationContext.js        # Context, SECTION_IDS, `useHasSeen(sectionId)`
 ├── lib/techIcons.js              # Single source of truth for tech icons & language map
 ├── hooks/useGithubRepos.js        # GitHub API client for Projects
 ├── i18n/index.js, i18n/locales/   # i18next setup + en.json / es.json
@@ -55,9 +57,14 @@ Multi-component sections live in their own folder with an `index.jsx` entry.
   there with a slug key; `Knowledge` references it via `SKILL_CATEGORIES`,
   and `Projects` maps GitHub language strings via `getTechByLanguage()`.
 - **Animations**: each section uses `useHasSeen('id')` from
-  `context/AnimationContext` to gate `fade-in-up`. Stagger via inline
-  `animationDelay`. The section ids are registered in
-  `AnimationContext.SECTION_IDS`.
+  `context/animationContext.js` to gate `fade-in-up`. Stagger via inline
+  `animationDelay`. The section ids are registered in `SECTION_IDS`, exported
+  from the same file. The provider lives in `context/AnimationProvider.jsx` and
+  exports only the component — keeping the hook, context and `SECTION_IDS` in
+  a separate file is what keeps Fast Refresh working
+  (`react-refresh/only-export-components`). The two filenames deliberately
+  differ by more than case, so imports resolve the same way on case-insensitive
+  filesystems.
 - **Brand colors**: defined as CSS variables in `index.css`
   (`--color-brand-light-*`, `--color-brand-dark-*`, `--color-brand-green`,
   `--color-brand-yellow`). Always reference via Tailwind classes
@@ -130,9 +137,9 @@ new repo to ES by adding its key under `projects.repos` in `es.json`.
 ### OG image
 
 `scripts/generate-og.mjs` renders the social preview image to
-`public/og-banner.png`. The `build` npm script runs the generator before
+`public/og-banner.png`. The `build` script runs the generator before
 `vite build`, so the deployed image is always in sync with the script. Run
-`npm run og` to regenerate just the image during development.
+`bun run og` to regenerate just the image during development.
 
 ## When making changes
 

@@ -5,7 +5,7 @@ import Knowledge from './sections/Knowledge'
 import Experience from './sections/Experience'
 import Projects from './sections/Projects'
 import Contact from './sections/Contact'
-import { AnimationProvider } from './context/AnimationContext'
+import { AnimationProvider } from './context/AnimationProvider'
 
 function App() {
   const [isDark, setIsDark] = useState(() => {

@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { SiGithub, SiInstagram } from 'react-icons/si'
 import { FaLinkedin } from 'react-icons/fa'
-import { useHasSeen } from '../context/AnimationContext'
+import { useHasSeen } from '../context/animationContext'
 
 const LINKS = [
   { label: 'GitHub',    href: 'https://github.com/devleooper',            icon: SiGithub    },

@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { useHasSeen } from '../../context/AnimationContext'
+import { useHasSeen } from '../../context/animationContext'
 import IdCard from './IdCard'
 
 export default function Knowledge() {

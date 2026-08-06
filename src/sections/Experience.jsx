@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useHasSeen } from '../context/AnimationContext'
+import { useHasSeen } from '../context/animationContext'
 
 const TIMELINE = [
   { key: 'sonatype',           tech: ['Java', 'Spring', 'React', 'AWS'] },
