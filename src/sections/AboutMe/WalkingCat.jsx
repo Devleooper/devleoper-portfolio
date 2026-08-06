@@ -14,9 +14,15 @@ export default function WalkingCat({ name, className }) {
     return () => clearInterval(id)
   }, [])
 
+  // All frames stay mounted and we just toggle which one is visible. Swapping
+  // `src` on a single <img> made the browser re-request every frame (the dev
+  // server serves public/ with no-cache), which showed up as an endless loop
+  // of PNG requests in the network tab.
   return (
     <div className={`cat-walk cat-walk--${name} ${className}`}>
-      <img src={frames[frame]} alt="" aria-hidden="true" />
+      {frames.map((src, i) => (
+        <img key={src} src={src} alt="" aria-hidden="true" hidden={i !== frame} />
+      ))}
     </div>
   )
 }
