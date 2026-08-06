@@ -23,23 +23,23 @@ Personal portfolio site — who I am, what I've built, and how to reach me.
 
 ## Running locally
 
-Built with [Bun](https://bun.sh/), but npm works too.
+Built with [Bun](https://bun.sh/).
 
 ```bash
 # install dependencies
-bun install         # or npm install
+bun install
 
 # start dev server (http://localhost:5173)
-bun dev             # or npm run dev
+bun dev
 
 # build for production (regenerates the OG image, then runs Vite)
-bun run build       # or npm run build
+bun run build
 
 # preview the production build
-bun preview         # or npm run preview
+bun preview
 
 # regenerate only the OG / Twitter card preview image
-bun run og          # or npm run og
+bun run og
 ```
 
 ## Project structure

@@ -16,7 +16,7 @@ hand-written code that they can read and tweak themselves.
 - **Formspree** free tier for the contact form (no backend)
 
 No TypeScript, no test runner, no Storybook. Lint via `eslint` with `react-hooks`
-and `react-refresh` plugins. Lint is enforced via `npm run lint`; the build does
+and `react-refresh` plugins. Lint is enforced via `bun run lint`; the build does
 not gate on lint.
 
 ## Project structure
@@ -130,9 +130,9 @@ new repo to ES by adding its key under `projects.repos` in `es.json`.
 ### OG image
 
 `scripts/generate-og.mjs` renders the social preview image to
-`public/og-banner.png`. The `build` npm script runs the generator before
+`public/og-banner.png`. The `build` script runs the generator before
 `vite build`, so the deployed image is always in sync with the script. Run
-`npm run og` to regenerate just the image during development.
+`bun run og` to regenerate just the image during development.
 
 ## When making changes
 
